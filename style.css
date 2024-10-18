@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url(/assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(/assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+:root {
+  --white: #ebf4ff;
+  --blue: #274060;
+  --teal: #25a18e;
+  --accent: #d5573b;
+}
+
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--blue);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+@media (max-width: 500px) {
+  .hero-container {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+
+}
+
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  background-color: var(--teal);
+  margin-bottom: -1vh;
+}
+
+.hero-left {
+  position: relative;
+  padding: 5vh 5vw 0 5vw;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-title {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 5%;
+  text-align: center;
+  margin: 0;
+  color: var(--accent);
+  font-size: 4vh;
+}
+
+.hero-img {
+  overflow: hidden;
+}
+
+.hero-img img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5vh;
+}
+
+.hero-right {
+  padding: 1vh 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icons a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 2.5vh;
+  margin: 0 .25vw;
+}
+
+.section-title, .transition-title {
+  color: var(--accent);
+  font-size: 4vh;
+  margin: 0;
+  padding: 0;
+}
+
+.transition-title {
+  text-align: center;
+  position: relative;
+  top: 40%;
+  animation: bounce 1000ms ease-in-out  infinite forwards alternate;
+}
+
+@keyframes bounce {
+  0% {
+    top: 40%;
+  }
+  100% {
+    top: 45%;
+  }
+}
+
+.hero-right>p {
+  line-height: 3vh;
+}
+
+.card-container {
+  z-index: -1;
+  position: relative;
+  display: grid;
+  padding: 3vh;
+}
+
+.section {
+  aspect-ratio: 900/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.waves {
+  background-image: url('./assets/shapes/layered-waves-haikei.svg');
+}
