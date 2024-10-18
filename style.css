@@ -34,10 +34,18 @@ body {
     display: flex !important;
     flex-direction: column;
     align-items: center;
+    margin-bottom: -4vh !important;
   }
 
-  
+  .card-container {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .lower {
+    padding: 0 5vw 5vw 5vw !important;
+  }
 }
 
 
@@ -45,7 +53,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   background-color: var(--teal);
-  margin-bottom: -1vh;
+  margin-bottom: -10vh;
 }
 
 .hero-left {
@@ -97,11 +105,16 @@ body {
   margin: 0 .25vw;
 }
 
-.section-title, .transition-title {
+.section-title, .transition-title, .cards-title {
   color: var(--accent);
   font-size: 4vh;
   margin: 0;
   padding: 0;
+}
+
+.cards-title {
+  text-align: center;
+  margin-top: 10vh;
 }
 
 .transition-title {
@@ -142,3 +155,45 @@ body {
 .waves {
   background-image: url('./assets/shapes/layered-waves-haikei.svg');
 }
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+  gap: 2vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 5vh;
+  background-color: var(--teal);
+}
+
+.upper {
+  position: relative;
+}
+
+.upper h3 {
+  position: absolute;
+  left: 2vw;
+  bottom: 0.5vh;
+  font-size: 4vh;
+  text-shadow: 0 2px 0 black;
+}
+
+.lower {
+  padding: 1vh 2.5vw 2.5vh 2.5vw;
+}
+
+.card-picture {
+  overflow: hidden;
+}
+
+.card-picture img {
+  width: 100%;
+  height: 20vh;
+  border-radius: 5vh 5vh 0 0;
+  object-fit: cover;
+}
+
