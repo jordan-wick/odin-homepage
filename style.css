@@ -48,6 +48,13 @@ body {
   }
 }
 
+@media (min-width: 500px)
+and (max-width: 1199px) {
+  .card-container {
+    grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr)) !important;
+  }
+}
+
 
 .hero-container {
   display: grid;
@@ -154,6 +161,10 @@ body {
 
 .waves {
   background-image: url('./assets/shapes/layered-waves-haikei.svg');
+}
+
+.bottom-waves {
+  background-image: url('./assets/shapes/layered-waves-haikei-bottom.svg');
 }
 
 .card-container {
