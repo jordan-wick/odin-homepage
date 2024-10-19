@@ -132,19 +132,24 @@ a:hover {
   margin-top: 10vh;
 }
 
+.transition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .transition-title {
   text-align: center;
   position: relative;
-  top: 40%;
   animation: bounce 1000ms ease-in-out  infinite forwards alternate;
 }
 
 @keyframes bounce {
   0% {
-    top: 40%;
+    transform: translateY(5%);
   }
   100% {
-    top: 45%;
+    transform: translateY(-5%);
   }
 }
 
