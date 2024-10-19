@@ -103,9 +103,10 @@ and (max-width: 1199px) {
 .icons {
   display: flex;
   justify-content: flex-end;
+  gap: 1vh;
 }
 
-.icons a {
+a {
   text-decoration: none;
   color: var(--white);
   font-size: 2.5vh;
@@ -165,6 +166,9 @@ and (max-width: 1199px) {
 
 .bottom-waves {
   background-image: url('./assets/shapes/layered-waves-haikei-bottom.svg');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card-container {
@@ -208,3 +212,22 @@ and (max-width: 1199px) {
   object-fit: cover;
 }
 
+.contact-container {
+  margin-left: 5vw;
+  padding-bottom: 2vh;
+}
+
+svg {
+  width: 2.5vh;
+  fill: var(--white);
+}
+
+.contact-container>* {
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+}
+
+.contact-container .icons {
+  justify-content: flex-start !important;
+}
